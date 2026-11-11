@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#004098">
+<title>大健康个护品类情报简报｜2026上海进博会（第九届）· VD FIT产品团队</title>
+<style>
+  :root{
+    --brand:#004098;
+    --brand-deep:#002A66;
+    --brand-mid:#0A5BC4;
+    --accent:#50CCFF;
+    --accent-soft:#D6F1FF;
+    --ink:#2E343C;
+    --ink-2:#49525E;
+    --muted:#6F7B8A;
+    --line:#DCE1E9;
+    --bg:#F4F8FE;
+    --card:#FFFFFF;
+    --radius:12px;
+    --warn:#9A6A16;
+    --ok:#1F5C3F;
+    --bad:#C4161C;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:15px;line-height:1.75;letter-spacing:.01em;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{width:100%;max-width:880px;margin:0 auto;padding:0 16px 40px;}
+
+  /* ===== Header ===== */
+  header.hero{
+    background:linear-gradient(155deg,var(--brand-deep) 0%,var(--brand) 52%,var(--brand-mid) 100%);
+    color:#fff;padding:34px 18px 28px;margin:0 0 22px;
+    position:relative;overflow:hidden;
+  }
+  header.hero::after{
+    content:"";position:absolute;right:-80px;top:-100px;width:280px;height:280px;border-radius:50%;
+    background:radial-gradient(circle,rgba(80,204,255,.34),transparent 68%);
+  }
+  .hero-inner{max-width:880px;margin:0 auto;position:relative;z-index:1;}
+  .brand{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:11.5px;letter-spacing:.18em;color:var(--accent);
+    margin-bottom:14px;
+  }
+  .brand i{display:block;width:22px;height:1px;background:var(--accent);}
+  h1{margin:0 0 8px;font-size:23px;line-height:1.42;font-weight:700;}
+  .en{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.66);margin:0 0 18px;}
+  .pills{display:flex;flex-wrap:wrap;gap:7px;}
+  .pill{
+    font-size:11.5px;line-height:1.5;padding:4px 9px;border-radius:999px;
+    border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.1);
+    color:rgba(255,255,255,.92);white-space:nowrap;
+  }
+  .pill b{color:var(--accent);font-weight:600;margin-right:4px;}
+
+  /* ===== Nav ===== */
+  .nav{display:flex;gap:8px;overflow-x:auto;padding:0 0 4px;margin:0 0 18px;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+  .nav::-webkit-scrollbar{display:none;}
+  .nav a{
+    flex:0 0 auto;font-size:12px;color:var(--brand);
+    background:#fff;border:1px solid var(--line);padding:6px 11px;border-radius:999px;text-decoration:none;white-space:nowrap;
+  }
+
+  /* ===== Section ===== */
+  section{margin:0 0 26px;}
+  .sec-head{display:flex;align-items:flex-start;gap:11px;margin:0 0 12px;padding-top:4px;}
+  .num{
+    font-size:26px;line-height:1;font-weight:800;color:var(--brand);
+    font-variant-numeric:tabular-nums;flex:0 0 auto;padding-top:3px;
+  }
+  .sec-title{flex:1 1 auto;}
+  .sec-title h2{margin:0;font-size:17.5px;line-height:1.42;font-weight:700;color:var(--brand-deep);}
+  .sec-title .sub{font-size:12px;color:var(--muted);margin:3px 0 0;}
+
+  .summary{
+    background:#fff;border:1px solid var(--line);border-left:3px solid var(--brand);
+    border-radius:0 10px 10px 0;padding:11px 14px;margin:0 0 12px;
+    font-size:13.5px;line-height:1.78;
+  }
+  .summary ul{margin:0;padding-left:17px;}
+  .summary li{margin:4px 0;}
+  .summary li b{color:var(--brand-deep);}
+
+  /* KPI */
+  .kpi{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:0 0 12px;}
+  .k-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:12px 12px 10px;position:relative;overflow:hidden;}
+  .k-item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--brand);}
+  .kl{font-size:11px;color:var(--muted);display:block;}
+  .kv-num{font-size:22px;font-weight:800;color:var(--brand-deep);line-height:1.22;margin:3px 0 1px;font-variant-numeric:tabular-nums;}
+  .kd{font-size:11.5px;color:var(--muted);line-height:1.5;}
+
+  /* Cards */
+  .cards{display:grid;grid-template-columns:1fr;gap:10px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:13px 14px 12px;}
+  .card h4{margin:0 0 6px;font-size:14.5px;line-height:1.5;color:var(--brand-deep);font-weight:700;}
+  .card .lead-line{font-size:13px;color:var(--ink-2);margin:0 0 8px;}
+  .kv .row{display:grid;grid-template-columns:76px 1fr;gap:8px;padding:5px 0;border-top:1px dashed #EDF1F7;font-size:13px;}
+  .kv .row:first-child{border-top:0;}
+  .kv .k{color:var(--muted);}
+  .kv .v{color:var(--ink);}
+  .kv .v b{color:var(--brand-deep);}
+
+  /* Tags */
+  .tag{display:inline-block;font-size:10.5px;line-height:1.55;padding:1px 6px;border-radius:4px;border:1px solid;white-space:nowrap;font-weight:600;vertical-align:1px;}
+  .t-ok{color:var(--ok);border-color:#BFD8C9;background:#F2F8F4;}
+  .t-3rd{color:#5A4A86;border-color:#CFC4E3;background:#F7F4FC;}
+  .t-judge{color:var(--warn);border-color:#E3D2AA;background:#FDF8EC;}
+  .t-check{color:var(--bad);border-color:#E6C3C1;background:#FDF3F2;}
+
+  /* details */
+  details{background:#fff;border:1px solid var(--line);border-radius:var(--radius);margin:0 0 10px;overflow:hidden;}
+  details[open]{border-color:#BBD2EA;}
+  summary{
+    cursor:pointer;list-style:none;padding:12px 14px;
+    font-size:13.5px;font-weight:600;color:var(--brand-deep);
+    display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;
+  }
+  summary::-webkit-details-marker{display:none;}
+  .plus{flex:0 0 auto;font-size:16px;line-height:1;color:var(--brand);transition:transform .18s ease;}
+  details[open] .plus{transform:rotate(45deg);}
+  details .body{padding:2px 14px 14px;}
+
+  /* table */
+  .hint{font-size:11.5px;color:var(--muted);margin:2px 0 6px;display:none;}
+  .tw{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:8px;}
+  table{border-collapse:collapse;width:100%;min-width:520px;font-size:12.5px;line-height:1.6;background:#fff;}
+  th,td{border:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top;}
+  th{background:#F4F8FE;color:var(--brand-deep);font-weight:700;white-space:nowrap;}
+  td.n{font-variant-numeric:tabular-nums;white-space:nowrap;}
+  tbody tr:nth-child(even) td{background:#FCFEFF;}
+
+  /* sources */
+  .src-line{
+    font-size:11.5px;line-height:1.65;color:var(--muted);
+    margin:8px 0 0;padding-top:7px;border-top:1px dashed #EDF1F7;word-break:break-all;
+  }
+  .src-line a{color:#12518F;text-decoration:none;border-bottom:1px dotted #A9C2DC;}
+  .src-line .lab{color:var(--brand-deep);font-weight:600;margin-right:3px;}
+
+  .note{
+    font-size:12.5px;color:var(--ink-2);background:#fff;
+    border:1px solid var(--line);border-left:3px solid #B7C6D8;
+    border-radius:0 8px 8px 0;padding:10px 12px;margin:10px 0 0;
+  }
+  .note b{color:var(--brand-deep);}
+  .quote{font-size:12.5px;line-height:1.7;background:#F4F8FE;border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:8px 0 0;color:var(--ink-2);}
+
+  /* actions */
+  .act{border:1px solid var(--line);border-left-width:3px;border-left-style:solid;border-left-color:var(--brand);border-radius:0 10px 10px 0;background:#fff;padding:11px 13px;margin:0 0 8px;}
+  .act .p{font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--brand);}
+  .act h5{margin:2px 0 4px;font-size:13.5px;color:var(--brand-deep);}
+  .act p{margin:0;font-size:12.8px;color:var(--ink-2);line-height:1.72;}
+
+  footer{
+    margin-top:34px;padding:22px 16px 30px;background:var(--brand-deep);
+    color:rgba(255,255,255,.78);text-align:center;font-size:11.5px;
+  }
+  footer .motto{color:var(--accent);font-size:12px;letter-spacing:.22em;margin-bottom:8px;}
+  footer .fin{color:rgba(255,255,255,.5);font-size:11px;line-height:1.7;}
+
+  @media (min-width:720px){
+    body{font-size:15.5px;}
+    .wrap{padding:0 24px 56px;}
+    header.hero{padding:46px 24px 36px;border-radius:0 0 18px 18px;}
+    h1{font-size:31px;line-height:1.36;}
+    .kpi{grid-template-columns:repeat(4,1fr);}
+    .cards{grid-template-columns:1fr 1fr;}
+    .kv .row{grid-template-columns:86px 1fr;}
+    .sec-title h2{font-size:19px;}
+    .num{font-size:30px;}
+    .summary{font-size:14px;padding:13px 16px;}
+    table{font-size:13px;}
+    .hint{display:block;}
+  }
+  @media (min-width:1024px){
+    .wrap{max-width:980px;}
+    header.hero{padding:56px 32px 42px;}
+    h1{font-size:34px;}
+  }
+  @media (max-width:380px){
+    h1{font-size:20.5px;}
+    .kv-num{font-size:20px;}
+    .kv .row{grid-template-columns:68px 1fr;}
+  }
+  @media print{
+    body{background:#fff;font-size:11pt;}
+    header.hero{background:#fff;color:#111;border-bottom:2px solid #004098;}
+    .nav{display:none;}
+    .tw{overflow:visible;}
+    footer{background:#fff;color:#444;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="brand"><i></i><span>VD FIT产品团队 · 市场与行业情报</span></div>
+    <h1>2026年上海进博会（第九届）<br>大健康个护品类情报简报</h1>
+    <p class="en">Market and Industry Intelligence</p>
+    <div class="pills">
+      <span class="pill"><b>时间</b>2026-11-11</span>
+      <span class="pill"><b>届次</b>第九届（11/5–11/10）</span>
+      <span class="pill"><b>板块</b>9 大板块</span>
+      <span class="pill"><b>用途</b>决策参考</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<nav class="nav">
+  <a href="#s1">01 速览</a>
+  <a href="#s2">02 品类与展区</a>
+  <a href="#s3">03 大盘与成交</a>
+  <a href="#s4">04 竞品与新品</a>
+  <a href="#s5">05 营销动作</a>
+  <a href="#s6">06 高端院线</a>
+  <a href="#s7">07 下届进博会</a>
+  <a href="#s8">08 建议</a>
+  <a href="#s9">09 来源</a>
+</nav>
+
+<!-- 01 -->
+<section id="s1">
+  <div class="sec-head">
+    <div class="num">01</div>
+    <div class="sec-title"><h2>本期速览</h2></div>
+  </div>
+
+  <div class="kpi">
+    <div class="k-item"><span class="kl">按年计意向成交</span><span class="kv-num">854.5亿</span><span class="kd">美元，同比 +2.3%，历史新高</span></div>
+    <div class="k-item"><span class="kl">境外参展企业</span><span class="kv-num">4142家</span><span class="kd">企业展面积首达 37 万㎡</span></div>
+    <div class="k-item"><span class="kl">首发首秀首展</span><span class="kv-num">485件</span><span class="kd">上届 461 件，创历年新高</span></div>
+    <div class="k-item"><span class="kl">注册观众</span><span class="kv-num">47万</span><span class="kd">51 个交易团、700+ 分团</span></div>
+  </div>
+
+  <div class="summary">
+    <ul>
+      <li><b>规模与成交双创新高。</b>162 个国家、地区和国际组织参与，整体面积超 44 万㎡，进博会仍是进口侧最强的选品与渠道场。</li>
+      <li><b>美容仪的话语权被美妆集团接管。</b>欧莱雅一次带来三款美妆科技亚洲首秀——兰蔻菁纯驭时光能面膜仪（CES 2026 创新奖）、巴黎卡诗 K-SPA 院线级护理系统、多效光能美发棒；专业美容仪品牌本届公开声量明显偏弱。</li>
+      <li><b>康养与按摩把“AI＋情绪价值”做成标配。</b>傲胜 uDream AI 五感养身椅入选十大黑科技展品；荣泰用 10 款 AI 按摩机器人把按摩椅讲成“一站式家庭健康管理终端”。</li>
+      <li><b>护肤侧真正的机会在“项目后修护”。</b>Dr.Jart+ 把面膜做成黄金微针等项目后的分层修护方案，与我们“凝胶＋面膜”的耗材组合直接对位。</li>
+      <li><b>腰带与塑形仍是无品牌的空位。</b>本届没有以 EMS 塑形腰带为主打的展商，供给散落在按摩椅、跑步机与康养设备里。</li>
+    </ul>
+    <p class="src-line"><span class="lab">来源</span>
+      <a href="http://m.toutiao.com/group/7706723865531089434/">新华社：进博会上，中国“超级买家”带动全球商机（854.5 亿美元）</a> ·
+      <a href="https://www.ciie.org/zbh/bqgffb/20261110/66216.html">进博会官网：第九届“成绩单”</a>
+    </p>
+  </div>
+</section>
+
+<!-- 02 -->
+<section id="s2">
+  <div class="sec-head">
+    <div class="num">02</div>
+    <div class="sec-title">
+      <h2>四条产品线各自落在哪个展区</h2>
+      <p class="sub">消费品展区（5.1／6.1／6.2 馆）与医疗展区（1.1／1.2／2.1 馆）覆盖了我们全部品类</p>
+    </div>
+  </div>
+
+  <div class="summary">
+    <ul>
+      <li>美容仪、护肤、面膜、彩妆在<b>消费品展区·美妆日化专区</b>；腰带与塑形相关供给落在<b>家电家居、体育户外</b>两个相邻专区。</li>
+      <li>院线级设备与康复、适老产品在<b>医疗器械及医药保健展区</b>，其中 2.1 馆为健康养老专区。</li>
+      <li>进博会以进口为主题，展商结构以境外品牌与外资集团为主；国产整机多以采购商、渠道方身份到场，因此这里的竞品情报主要来自外资集团的在华动作。</li>
+    </ul>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <h4>EMS 微电流美容仪（面／头戴／颈）</h4>
+      <div class="kv">
+        <div class="row"><span class="k">展区</span><span class="v">消费品展区 美妆日化专区（5.1／6.1／6.2 馆）</span></div>
+        <div class="row"><span class="k">本届代表</span><span class="v">欧莱雅（兰蔻面膜仪、卡诗 K-SPA）、雅诗兰黛（交互式肌肤健康智能体）、资生堂（医美科技）、飞利浦（头皮养护梳全球首展）</span></div>
+        <div class="row"><span class="k">观察</span><span class="v">“仪器＋耗材＋检测”被打包成一个系统卖，单机不再是主角</span></div>
+      </div>
+      <p class="src-line"><span class="lab">来源</span><a href="https://www.ciie.org/zbh/cn/2024/medium-item2/other/20261022/64716.html">进博会官网转载：消费品展区欧莱雅剧透</a></p>
+    </div>
+
+    <div class="card">
+      <h4>EMS 燃脂／塑形腰带</h4>
+      <div class="kv">
+        <div class="row"><span class="k">展区</span><span class="v">消费品展区 家电家居／体育户外专区</span></div>
+        <div class="row"><span class="k">本届代表</span><span class="v">傲胜 OSIM（养身椅）、荣泰（AI 按摩机器人）、松下（按摩椅、高频肩颈传导带）、乔山（AI 跑步机）</span></div>
+        <div class="row"><span class="k">观察</span><span class="v">塑形需求被“康养＋健身”两条线分流，腰带类没有品牌化展位</span></div>
+      </div>
+      <p class="src-line"><span class="lab">来源</span><a href="https://m.thepaper.cn/newsDetail_forward_34445001">澎湃新闻：荣泰 5.1 馆 A5-02</a></p>
+    </div>
+
+    <div class="card">
+      <h4>玻尿酸凝胶与面膜护肤</h4>
+      <div class="kv">
+        <div class="row"><span class="k">展区</span><span class="v">消费品展区 美妆日化专区</span></div>
+        <div class="row"><span class="k">本届代表</span><span class="v">Dr.Jart+（324 浓修彩丸面膜）、OLAY（大红瓶水乳）、资生堂、花王、枫缇</span></div>
+        <div class="row"><span class="k">观察</span><span class="v">面膜正从“补水”转向“项目后修护”，与仪器绑定销售</span></div>
+      </div>
+      <p class="src-line"><span class="lab">来源</span><a href="https://news.qq.com/rain/a/20261111A04KNS00">腾讯新闻：Dr.Jart+ 324 浓修彩丸面膜</a></p>
+    </div>
+
+    <div class="card">
+      <h4>高端医疗与院线</h4>
+      <div class="kv">
+        <div class="row"><span class="k">展区</span><span class="v">医疗器械及医药保健展区（1.1／1.2／2.1 馆）</span></div>
+        <div class="row"><span class="k">展品范围</span><span class="v">含“医疗美容”；2.1 馆为健康养老专区（康复辅具、适老产品、睡眠修复）</span></div>
+        <div class="row"><span class="k">本届代表</span><span class="v">西门子医疗、GE 医疗、美敦力、强生、直观复星、索诺瓦、爱尔康</span></div>
+      </div>
+      <p class="src-line"><span class="lab">来源</span><a href="https://www.ciie.org/zbh/bqgffb/20260901/63827.html">进博会官网：医疗展区与消费品展区展位图</a></p>
+    </div>
+  </div>
+
+  <p class="note"><b>口径说明</b>：展区馆号为官方公布口径；各专区内的品牌为公开报道可核实者，不代表展区全貌，完整名录需以进博会网上展厅逐条核对。</p>
+</section>
+
+<!-- 03 -->
+<section id="s3">
+  <div class="sec-head">
+    <div class="num">03</div>
+    <div class="sec-title">
+      <h2>大盘与成交</h2>
+      <p class="sub">五项核心数据同时创新高，采购侧比展商侧更热</p>
+    </div>
+  </div>
+
+  <div class="summary">
+    <ul>
+      <li>五项核心数据创新高：4142 家企业、企业展 37 万㎡、500 强与行业龙头超 300 家、485 件首发首秀首展、意向成交 854.5 亿美元（+2.3%）。</li>
+      <li>上海交易团按年计意向成交 112 亿美元（+5.47%），连续九年居地方交易团首位；其中首次意向采购的商品 155 种、金额 29 亿美元。</li>
+      <li>首次举办中欧医疗器械专场贸易对接会：约 200 家中外企业、500 余人到场，现场初步合作意向超 100 项。</li>
+      <li>62 场集中签约、累计 400 多个合作意向；对接洽谈超 4000 轮次。</li>
+    </ul>
+  </div>
+
+  <div class="kpi">
+    <div class="k-item"><span class="kl">企业展面积</span><span class="kv-num">37万㎡</span><span class="kd">首次达到，整体超 44 万㎡</span></div>
+    <div class="k-item"><span class="kl">500强与龙头</span><span class="kv-num">300+</span><span class="kd">首次超过 300 家</span></div>
+    <div class="k-item"><span class="kl">集中签约</span><span class="kv-num">62场</span><span class="kd">累计 400+ 合作意向</span></div>
+    <div class="k-item"><span class="kl">上海交易团</span><span class="kv-num">112亿</span><span class="kd">美元，同比 +5.47%</span></div>
+  </div>
+
+  <details>
+    <summary><span>与第八届（2025）对比</span><span class="plus">＋</span></summary>
+    <div class="body">
+      <p class="hint">表格可左右滑动查看 →</p>
+      <div class="tw">
+        <table>
+          <thead><tr><th>指标</th><th>第八届（2025）</th><th>第九届（2026）</th></tr></thead>
+          <tbody>
+            <tr><td>境外参展企业</td><td class="n">4108 家</td><td class="n">4142 家</td></tr>
+            <tr><td>首发首秀首展</td><td class="n">461 件</td><td class="n">485 件</td></tr>
+            <tr><td>意向成交（按年计）</td><td class="n">834.9 亿美元</td><td class="n">854.5 亿美元</td></tr>
+            <tr><td>整体展览面积</td><td class="n">43 万㎡</td><td class="n">超 44 万㎡</td></tr>
+            <tr><td>注册观众</td><td class="n">&gt;46 万</td><td class="n">&gt;47 万</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="src-line"><span class="lab">来源</span>
+        <a href="https://www.ciie.org/resource/static/zbh/default/assets-2025/download/PDF/CIIE2026InvitationBrochure_CN.pdf">进博会参展邀请手册（第八届数据）</a> ·
+        <a href="https://news.gmw.cn/2026-11/11/content_39095366.htm">光明网：第九届进博会圆满闭幕</a>
+      </p>
+    </div>
+  </details>
+
+  <details>
+    <summary><span>“首发经济”的落地机制：从展台到货架有多快</span><span class="plus">＋</span></summary>
+    <div class="body">
+      <div class="kv">
+        <div class="row"><span class="k">通关</span><span class="v">上海首创首发进口消费品检验便利化措施，通关时长从最少 7 天压到最快当天放行 <span class="tag t-3rd">媒体口径</span></span></div>
+        <div class="row"><span class="k">常年展销</span><span class="v">“6 天＋365 天”机制，虹桥品汇已汇聚 120 多个国家、6000 多个品牌、8.5 万款进博同款商品</span></div>
+        <div class="row"><span class="k">新品发布</span><span class="v">第七届起设《进博新品汇》，本届 11/6–8 连播三天；消费品展区 31 家展商参与集中发布</span></div>
+        <div class="row"><span class="k">含义</span><span class="v">海外新品进入中国的时间差被制度性压缩，代工与代理的窗口同步收窄</span></div>
+      </div>
+      <p class="src-line"><span class="lab">来源</span>
+        <a href="https://www.ciie.org/zbh/cn/19news/dynamics/exhibitors/20261105/65512.html">进博会官网：《进博新品汇》消费品展区排期</a> ·
+        <a href="http://m.toutiao.com/group/7706723236700062271/">媒体观察：首发经济三个闭环</a>
+      </p>
+    </div>
+  </details>
+  <details>
+    <summary><span>美妆个护相关的采购与渠道信号</span><span class="plus">＋</span></summary>
+    <div class="body">
+      <div class="kv">
+        <div class="row"><span class="k">百联集团</span><span class="v">2026 年与美妆品牌的合作规模预计逼近 1 亿美元，美妆板块年销售额近 16 亿元；此前正是通过进博会“结识”资生堂旗下新品牌律曜、AI 肌肤检测仪与智能美容仪，并将其引入线下商场</span></div>
+        <div class="row"><span class="k">采购方向</span><span class="v">本届加大国际新锐美妆、个护、生活好物采购，后续通过场景体验与小范围市场测试加速新品本土化</span></div>
+        <div class="row"><span class="k">展位升级</span><span class="v">新加坡美妆品牌 Bléde Fonty 枫缇从 9㎡“拼位”升级为 150㎡ 独立展位，2025 年在上海黄浦落地两家直营店</span></div>
+        <div class="row"><span class="k">美妆生态</span><span class="v">静安“美创静界”Beauty Hub 亮相 6.1 馆 C4-01，已入驻 150 余家美妆企业，推动 20 余个海外品牌、60 余款产品进入中国市场</span></div>
+        <div class="row"><span class="k">含义</span><span class="v">美妆个护的“进博订单”主要发生在渠道与代理层，而非品牌零售层；仪器类产品正是被渠道方作为“引流黑科技”采购的品类</span></div>
+      </div>
+      <p class="src-line"><span class="lab">来源</span>
+        <a href="https://www.ciie.org/zbh/cn/2024/medium-item1/other/20260727/63154.html">进博会官网转载：百联美妆采购与枫缇展位升级</a> ·
+        <a href="http://m.toutiao.com/group/7701675218510627368/">上观新闻：美创静界 Beauty Hub</a>
+      </p>
+    </div>
+  </details>
+
+</section>
+
+<!-- 04 -->
+<section id="s4">
+  <div class="sec-head">
+    <div class="num">04</div>
+    <div class="sec-title">
+      <h2>竞品与新品</h2>
+      <p class="sub">四个战场：美妆科技、康养按摩、项目后修护、健身塑形</p>
+    </div>
+  </div>
+
+  <div class="summary">
+    <ul>
+      <li><b>美妆科技线由集团军主导。</b>欧莱雅 28 个品牌、29 款首发（均创纪录），三款美妆科技亚洲首秀；雅诗兰黛 17 个品牌、80 余款新品；资生堂 60 余款并展示医美科技。</li>
+      <li><b>康养线在拼“感知能力”。</b>傲胜用非接触 rPPG 测心率/呼吸/压力再自动匹配手法；荣泰把按摩椅做成可拉伸、可定制的“家庭健康管理终端”。</li>
+      <li><b>护肤线在抢“术后场景”。</b>Dr.Jart+ 明确对着黄金微针等项目后修护，提出分层稳态修护。</li>
+      <li><b>塑形线被健身器械覆盖。</b>乔山把 AI 体重管理做进跑步机，没有出现腰带形态的品牌化产品。</li>
+    </ul>
+    <p class="src-line"><span class="lab">来源</span>
+      <a href="https://www.ciie.org/zbh/cn/19news/dynamics/exhibitors/20261105/65512.html">进博会官网：消费品展区 31 家展商新品（含乔山 TX-7）</a> ·
+      <a href="https://www.shobserver.cn/wx/detail.do?id=1207585">上观新闻：美妆巨头首发与资生堂 60 余款</a>
+    </p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <h4>欧莱雅：三款亚洲首秀，两款是“仪器”</h4>
+      <div class="kv">
+        <div class="row"><span class="k">面膜仪</span><span class="v">兰蔻菁纯驭时光能面膜仪，获 CES 2026 创新奖；把“面膜＋光/能量”做成硬件</span></div>
+        <div class="row"><span class="k">院线级</span><span class="v">巴黎卡诗 K-SPA：K-SCAN AI 精测（三种光源、4K 头皮检测）＋K-STATION 护理仪（水氧、光子、纳米晶片）</span></div>
+        <div class="row"><span class="k">规模</span><span class="v">K-SCAN 已覆盖全球 9000 余家沙龙</span></div>
+        <div class="row"><span class="k">来源路径</span><span class="v">欧莱雅中国研发团队与中国初创企业共创，合作始于第四届进博会</span></div>
+      </div>
+      <p class="src-line"><span class="lab">来源</span>
+        <a href="http://www.shobserver.com/staticsg/res/html/journal/detail.html?code=whb&date=2026-11-05&id=543548&page=7">上观新闻/文汇报：欧莱雅 28 品牌 29 款首发</a> ·
+        <a href="https://www.ciie.org/zbh/cn/2024/medium-item2/other/20261022/64716.html">进博会官网：K-SPA 技术细节</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>雅诗兰黛：17 品牌 80+ 新品，交互装置成主角</h4>
+      <div class="kv">
+        <div class="row"><span class="k">新品</span><span class="v">覆盖护肤、彩妆、香氛、护发；MAC 定妆调色蜜粉饼全球首发</span></div>
+        <div class="row"><span class="k">装置</span><span class="v">12 大互动装置，含“交互式肌肤健康智能体”、脑波香氛艺术共创</span></div>
+        <div class="row"><span class="k">含义</span><span class="v">把“检测＋内容＋体验”放在展台，而不是把 SKU 摆满</span></div>
+      </div>
+      <p class="src-line"><span class="lab">来源</span><a href="https://wsb.sh.gov.cn/ywdt/gzjx/20261105/bfa4f2df0fc242389e7ccef4560d2dd2.html">上海市外办：消费品展区探馆</a></p>
+    </div>
+
+    <div class="card">
+      <h4>傲胜 OSIM：把“情绪价值”做成硬件参数</h4>
+      <div class="kv">
+        <div class="row"><span class="k">首发</span><span class="v">DreamSPA 中国大陆首发，核心 uDream AI 五感养身椅（宝石蓝进博限定色）</span></div>
+        <div class="row"><span class="k">技术</span><span class="v">74 项全球专利；携手 Binah.ai 的非接触 rPPG，几十秒面部监测得出心率、呼吸、压力指数并自动匹配手法</span></div>
+        <div class="row"><span class="k">背书</span><span class="v">入选《第九届进博会黑科技与硬科技展品报告》十大黑科技展品，消费品展区唯一上榜；2026 红点奖；《时代》2026 年度最佳发明</span></div>
+        <div class="row"><span class="k">小件</span><span class="v">腿松松（SonicTap 高速连击）、V 手随行枕、手持棒棒糖，切入办公与差旅场景</span></div>
+      </div>
+      <p class="src-line"><span class="lab">来源</span>
+        <a href="https://finance.sina.com.cn/jjxw/2026-11-10/doc-iniyfuyw5948798.shtml.md">新浪财经：OSIM 第八次参展</a> ·
+        <a href="https://m.sohu.com/a/1098008417_122058772/">搜狐：uDream AI 技术细节</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>荣泰：10 款 AI 按摩机器人</h4>
+      <div class="kv">
+        <div class="row"><span class="k">展位</span><span class="v">5.1 馆 A5-02</span></div>
+        <div class="row"><span class="k">旗舰</span><span class="v">RT9000Pro 宇航家拉伸⁴，四向分离式拉伸，可躺着完成八段锦；内置骑行放松、分年龄分性别方案</span></div>
+        <div class="row"><span class="k">矩阵</span><span class="v">覆盖居家康养、运动舒展、专业理疗；配筋膜枪、便携按摩披肩</span></div>
+        <div class="row"><span class="k">口径</span><span class="v">把按摩椅从“放松工具”讲成“一站式家庭健康管理终端”；700 余项专利</span></div>
+      </div>
+      <p class="src-line"><span class="lab">来源</span><a href="https://m.thepaper.cn/newsDetail_forward_34445001">澎湃新闻：荣泰进博展位与旗舰机</a></p>
+    </div>
+
+    <div class="card">
+      <h4>Dr.Jart+：面膜对准“项目后修护”</h4>
+      <div class="kv">
+        <div class="row"><span class="k">新品</span><span class="v">324 浓修彩丸面膜，提出“修护 2.0 分层稳态”</span></div>
+        <div class="row"><span class="k">技术</span><span class="v">重组 PDRN＋丝素蛋白微球（本土纳米微球专利）</span></div>
+        <div class="row"><span class="k">场景</span><span class="v">明确针对黄金微针等微创项目后，从急性敏感期到恢复期的不同状态</span></div>
+        <div class="row"><span class="k">对位</span><span class="v">与“凝胶＋面膜”的术后耗材组合直接同一战场</span></div>
+      </div>
+      <p class="src-line"><span class="lab">来源</span><a href="https://news.qq.com/rain/a/20261111A04KNS00">腾讯新闻：Dr.Jart+ 进博新品与修护理念</a></p>
+    </div>
+
+    <div class="card">
+      <h4>飞利浦与松下：个护硬件的老牌打法</h4>
+      <div class="kv">
+        <div class="row"><span class="k">飞利浦</span><span class="v">九届参展；AI 智护电动牙刷、焕屏剃须刀、萤火虫便携剃须刀首发；全球首次展出美姿个护产品“头皮养护梳”；本届共 56 款新品，含 10 款中国首发</span></div>
+        <div class="row"><span class="k">松下</span><span class="v">5.1 馆 B3-01，903㎡；纳诺怡吹风机、直发器、剃须刀，以及按摩椅、高频肩颈传导带</span></div>
+        <div class="row"><span class="k">含义</span><span class="v">头部个护品牌正把“头皮／颈部”等细分部位单独产品化</span></div>
+      </div>
+      <p class="src-line"><span class="lab">来源</span>
+        <a href="https://sww.sh.gov.cn/swdt/20261105/28f7c891fb154e15a8ee5df3b389fd17.html">上海市商务委：飞利浦首发清单</a> ·
+        <a href="http://w.dzwww.com/p/pbrffnykx9.html">海报新闻：松下展台概要</a>
+      </p>
+    </div>
+  </div>
+
+  <details>
+    <summary><span>没有出现的：空位在哪里</span><span class="plus">＋</span></summary>
+    <div class="body">
+      <div class="kv">
+        <div class="row"><span class="k">腰带</span><span class="v">本届未见以 EMS 塑形／燃脂腰带为主打形态的品牌化展商；相邻供给为按摩椅、腿机、跑步机 <span class="tag t-judge">判断</span></span></div>
+        <div class="row"><span class="k">专业美容仪</span><span class="v">雅萌、初普、NuFACE、宙斯等未见公开参展信息，本届仪器叙事由美妆集团与个护集团承接 <span class="tag t-check">待核实</span></span></div>
+        <div class="row"><span class="k">颈纹</span><span class="v">颈纹仍被并进“面颈一体”或“下颌线”模式，没有品牌做独立部位方案</span></div>
+        <div class="row"><span class="k">含义</span><span class="v">“塑形＋颈纹”两个位置空着，但需要硬件参数与场景叙事同时到位才占得住</span></div>
+      </div>
+      <p class="src-line"><span class="lab">来源</span>
+        <a href="https://www.ciie.org/zbh/cn/2024/medium-item2/shanghai/20261028/64944.html">进博会官网转载：消费品展区剧透</a> ·
+        <a href="https://sww.sh.gov.cn/swdt/20261105/28f7c891fb154e15a8ee5df3b389fd17.html">上海市商务委：重点展商</a>
+      </p>
+      <p class="note">“未见”指在公开报道与官方展商信息中未检索到，不等于确定未参展；完整名录需比对进博会网上展厅。</p>
+    </div>
+  </details>
+</section>
+
+<!-- 05 -->
+<section id="s5">
+  <div class="sec-head">
+    <div class="num">05</div>
+    <div class="sec-title">
+      <h2>竞品营销动作拆解</h2>
+      <p class="sub">六个可复用的动作，与预算多少无关，与叙事结构有关</p>
+    </div>
+  </div>
+
+  <div class="summary">
+    <ul>
+      <li><b>把“首发”当事件做：</b>485 件首发首秀首展被集中包装成《进博新品汇》，三天直播，展商只需提供“第一次”的理由。</li>
+      <li><b>把“检测”放到最前面：</b>先测再卖——卡诗 K-SCAN、雅诗兰黛肌肤健康智能体、傲胜 rPPG，都是先给数据再给方案。</li>
+      <li><b>把“共创”讲成来源：</b>卡诗 K-SPA 的合作起点、时间、合作方都写进叙事，技术因此有了出处。</li>
+      <li><b>把“场景”搭成房间：</b>松下“1＋N＋X”智感健康空间、索尼的模拟浴室跌倒监测，都在用房间替代展台。</li>
+      <li><b>把“奖项”当通行证：</b>CES 创新奖、红点、时代年度发明，成了新品进入中国渠道的第一张名片。</li>
+    </ul>
+  </div>
+
+  <details open>
+    <summary><span>六个动作与对应证据</span><span class="plus">＋</span></summary>
+    <div class="body">
+      <div class="tw">
+        <table>
+          <thead><tr><th>动作</th><th>本届样本</th><th>可复用点</th></tr></thead>
+          <tbody>
+            <tr><td>首发事件化</td><td>《进博新品汇》三天直播，消费品展区 31 家展商参与</td><td>给新品一个“第一次”的明确标签</td></tr>
+            <tr><td>先测后卖</td><td>K-SCAN 三光源 4K 头皮检测；肌肤健康智能体</td><td>检测结果直接生成方案，降低解释成本</td></tr>
+            <tr><td>医研／共创背书</td><td>K-SPA 由中国研发团队与本土初创共创</td><td>把研发过程公开，比单点参数更有说服力</td></tr>
+            <tr><td>场景化展台</td><td>松下 1＋N＋X 智感健康空间；索尼模拟浴室</td><td>用真实房间替代产品陈列</td></tr>
+            <tr><td>奖项前置</td><td>兰蔻面膜仪 CES 2026 创新奖；傲胜红点＋时代最佳发明</td><td>第三方奖项先于广告进入渠道话术</td></tr>
+            <tr><td>直播延展</td><td>荣泰进博专场直播“云逛展”，在线解答采购政策</td><td>把六天展期拉长成内容周期</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="src-line"><span class="lab">来源</span>
+        <a href="https://www.ciie.org/zbh/cn/19news/dynamics/exhibitors/20261105/65512.html">进博会官网：新品汇排期</a> ·
+        <a href="https://m.thepaper.cn/newsDetail_forward_34445001">澎湃新闻：荣泰直播</a> ·
+        <a href="https://www.mca.gov.cn/n1288/n1290/n1316/c1662004999980014459/content.html?site=elder">民政部：索尼跌倒监测场景</a>
+      </p>
+    </div>
+  </details>
+
+  <p class="note"><span class="tag t-judge">判断</span>　这一届的竞争不在参数表，而在“谁能把一个抽象收益讲成可当场验证的体验”。仪器类产品如果不能在 90 秒内给出可视化结果（水分、温度、肌电、围度变化），在展会与内容场里都会吃亏。</p>
+</section>
+
+<!-- 06 -->
+<section id="s6">
+  <div class="sec-head">
+    <div class="num">06</div>
+    <div class="sec-title">
+      <h2>高端医疗与院线</h2>
+      <p class="sub">次要板块：只作技术背书与联合项目资源，不作主攻方向</p>
+    </div>
+  </div>
+
+  <div class="summary">
+    <ul>
+      <li>医疗展区仍是“最卷展区”：12 家世界 500 强制药企业，全球前三大医学影像、前三大放疗设备企业悉数到场，展台面积创历届新高。</li>
+      <li>首发展品集中在影像、放疗、手术机器人与神经调控；中欧医疗器械专场对接会首次落地。</li>
+      <li>对赛道的含义：<b>“院线技术家用化”已成标准叙事</b>——卡诗把沙龙系统做成可复制的 K-SPA，雅萌把院线机与家用机放在同一展台。</li>
+    </ul>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <h4>医疗展区首发展品</h4>
+      <div class="kv">
+        <div class="row"><span class="k">西门子</span><span class="v">Halcyon Evolve 智能环形个体化放疗平台，全球首发</span></div>
+        <div class="row"><span class="k">GE 医疗</span><span class="v">LOGIQ Vita 高端全身 AI 超声诊断系统，全球首秀</span></div>
+        <div class="row"><span class="k">美敦力</span><span class="v">约 120 款产品；BrainSense 脑机接口闭环生态系统亚太首展</span></div>
+        <div class="row"><span class="k">强生</span><span class="v">海山二 分体式腔镜手术机器人系统，全球首秀</span></div>
+      </div>
+      <p class="src-line"><span class="lab">来源</span>
+        <a href="https://www.ciie.org/zbh/cn/2024/medium-item2/shanghai/20261104/65399.html">进博会官网转载：医疗展区“最卷”报道</a> ·
+        <a href="http://www.sh.xinhuanet.com/20261107/bffe60a3a05a4f69af6246119a00b472/c.html">新华网：首发首秀现场</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h4>健康养老专区（2.1 馆）</h4>
+      <div class="kv">
+        <div class="row"><span class="k">索诺瓦</span><span class="v">峰力 AI 超算 3.0 助听器，77 亿次/秒运算，强噪声下强化人声</span></div>
+        <div class="row"><span class="k">爱尔康</span><span class="v">焕全 C＋ 系列人工晶状体，覆盖单焦点到三焦点</span></div>
+        <div class="row"><span class="k">BIOPTRON</span><span class="v">量子超光眼镜全球首秀，光生物调节路径</span></div>
+        <div class="row"><span class="k">梦陀螺</span><span class="v">QFMT-GMB 好梦官微生态方案，进博会首发</span></div>
+      </div>
+      <p class="src-line"><span class="lab">来源</span><a href="https://www.ciie.org/zbh/cn/ciie/spotlight/20261102/65184.html">进博会官网：CIIE-HEALTH 适老黑科技</a></p>
+    </div>
+
+    <div class="card">
+      <h4>对我们有用的两条线</h4>
+      <div class="kv">
+        <div class="row"><span class="k">院线家用化</span><span class="v">卡诗 K-SPA 覆盖 9000 余家沙龙；雅萌同时展出家用机与院线机——同一技术，两个价位段</span></div>
+        <div class="row"><span class="k">术后修护</span><span class="v">微针、光电项目后的居家修护被单独产品化，凝胶与面膜是标准配置</span></div>
+        <div class="row"><span class="k">用法</span><span class="v">不必自建三类证设备，可与持证机构做“疗程＋居家维持”联合方案</span></div>
+      </div>
+      <p class="src-line"><span class="lab">来源</span>
+        <a href="http://www.shobserver.com/staticsg/res/html/journal/detail.html?code=whb&date=2026-11-05&id=543548&page=7">文汇报：K-SCAN 覆盖 9000 沙龙</a> ·
+        <a href="https://www.ya-man.co.jp/en/news/2932/">雅萌：家用机与院线机同台</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 07 -->
+<section id="s7">
+  <div class="sec-head">
+    <div class="num">07</div>
+    <div class="sec-title">
+      <h2>第十届进博会（2027）</h2>
+      <p class="sub">展期固定，报名已开；筹备从闭幕当天就启动了</p>
+    </div>
+  </div>
+
+  <div class="summary">
+    <ul>
+      <li><b>时间：</b>2027 年 11 月 5–10 日，国家会展中心（上海）；第九、十届连续两年均为 11/5–10。</li>
+      <li><b>进度：</b>闭幕当天已有 143 家企业及机构签约，签约展览面积超 10 万㎡；7 月招展启动时已有 68 家签约、30 余家企业将成为“十届全勤生”。</li>
+      <li><b>报名：</b>官网（ciie.org）—企业商业展—参展商报名；咨询邮箱 exhibition@ciie.org。专业观众走“参观预登记”或 App／小程序“专业观众注册”。</li>
+    </ul>
+  </div>
+
+  <div class="kpi">
+    <div class="k-item"><span class="kl">第十届展期</span><span class="kv-num">11/5–10</span><span class="kd">2027 年，上海</span></div>
+    <div class="k-item"><span class="kl">已签约企业</span><span class="kv-num">143家</span><span class="kd">闭幕当天口径</span></div>
+    <div class="k-item"><span class="kl">已签约面积</span><span class="kv-num">10万㎡</span><span class="kd">超过，仍在增加</span></div>
+    <div class="k-item"><span class="kl">十届全勤生</span><span class="kv-num">30+</span><span class="kd">罗氏、三星、欧莱雅等</span></div>
+  </div>
+
+  <details>
+    <summary><span>可以作为观察窗口的三件事</span><span class="plus">＋</span></summary>
+    <div class="body">
+      <div class="kv">
+        <div class="row"><span class="k">看供给</span><span class="v">消费品展区美妆日化的“仪器化”进度：是否出现独立美容仪品牌展台</span></div>
+        <div class="row"><span class="k">看价格</span><span class="v">进口新品定价与首发渠道，判断国内同类产品的价格带压力</span></div>
+        <div class="row"><span class="k">看政策</span><span class="v">进口化妆品电子标签、首发消费品检验便利化的扩围节奏</span></div>
+      </div>
+      <p class="src-line"><span class="lab">来源</span>
+        <a href="https://www.ciie.org/zbh/bqgffb/20260728/63288.html">进博会官网：第十届招展启动</a> ·
+        <a href="https://www.ciie.org/zbh/cn/19news/notice/20261001/64285.html">进博会官网：报名渠道与展期</a>
+      </p>
+    </div>
+  </details>
+</section>
+
+<!-- 08 -->
+<section id="s8">
+  <div class="sec-head">
+    <div class="num">08</div>
+    <div class="sec-title"><h2>建议</h2></div>
+  </div>
+
+  <div class="act"><div class="p">P0 · 合规与宣称</div><h5>先把“能说什么”钉死</h5>
+    <p>面膜、凝胶做“项目后修护”叙事时，避开医疗与疗效宣称；进口业务同步关注进口化妆品电子标签试点（上海 5/11 起）与新修订检验检疫办法（12/1 施行）带来的通关与标签变化。</p></div>
+
+  <div class="act"><div class="p">P0 · 产品对位</div><h5>把“颈纹”和“塑形”两个空位做实</h5>
+    <p>颈纹做独立导头＋独立模式＋颈膜，不与全脸模式混用；腰带从“脉冲＋发热”升级到多模态（双通道脉冲、红光、分区热敷、可穿戴轻量化），并给出可验证的围度变化。</p></div>
+
+  <div class="act"><div class="p">P1 · 技术叙事</div><h5>给产品装一只“会读数的眼睛”</h5>
+    <p>参照傲胜的 rPPG 与卡诗的 K-SCAN：腰带加压力／围度监测，美容仪加水份／温度反馈，面膜加使用前后对比。检测结果直接生成护理方案，这是本届最通用的叙事结构。</p></div>
+
+  <div class="act"><div class="p">P1 · 渠道与选品</div><h5>把进博会当“选品＋代理”窗口</h5>
+    <p>进博会的强项是进口新品与渠道对接，不是整机品牌曝光。可关注消费品展区美妆日化的新品牌与东南亚、欧洲小众品牌，评估代理或联名；专业观众注册在每年 9–10 月完成。</p></div>
+
+  <div class="act"><div class="p">P2 · 内容与背书</div><h5>补一张“第三方通行证”</h5>
+    <p>头部品牌把 CES 创新奖、红点、时代年度发明放进渠道话术。我们的产品线可优先争取检测机构报告、设计奖项与运动／康复场景的联合背书，替代自说自话的参数罗列。</p></div>
+</section>
+
+<!-- 09 -->
+<section id="s9">
+  <div class="sec-head">
+    <div class="num">09</div>
+    <div class="sec-title">
+      <h2>待核实事项与来源</h2>
+      <p class="sub">5 条尚无公开可查证据</p>
+    </div>
+  </div>
+
+  <div class="summary">
+    <ul>
+      <li><span class="tag t-check">待核实</span> 雅萌、初普、NuFACE、宙斯等专业美容仪品牌是否以任何形式参与本届（公开报道未见）。</li>
+      <li><span class="tag t-check">待核实</span> 医美上游（艾尔建美学、高德美等）在医疗展区的展出情况。</li>
+      <li><span class="tag t-check">待核实</span> 分品类现场成交与签约金额（仅有整体与上海交易团口径）。</li>
+      <li><span class="tag t-check">待核实</span> 消费品展区美妆日化专区的完整展商名单。</li>
+      <li><span class="tag t-check">待核实</span> 境外品牌是否有 EMS 塑形腰带形态的产品参展。</li>
+    </ul>
+  </div>
+
+  <details>
+    <summary><span>来源清单（按主题，点击可回溯）</span><span class="plus">＋</span></summary>
+    <div class="body">
+      <div class="src-line">
+        <b>一、大盘与官方数据</b><br>
+        1. 新华社：进博会上，中国“超级买家”带动全球商机（854.5 亿美元口径） — <a href="http://m.toutiao.com/group/7706723865531089434/">链接</a><br>
+        2. 进博会官网：5 项新高、9 个首次、9 项升级（成绩单） — <a href="https://www.ciie.org/zbh/bqgffb/20261110/66216.html">链接</a><br>
+        3. 媒体通气会报道：五项核心数据创新高、上海交易团 112 亿美元 — <a href="http://m.163.com/dy/article/LBEP189R05346936.html">链接</a><br>
+        4. 光明网：第九届进博会圆满闭幕 — <a href="https://news.gmw.cn/2026-11/11/content_39095366.htm">链接</a><br>
+        5. 中证网：订单与共识双丰收 — <a href="https://www.cs.com.cn/xwzx/01/2026/11/11/detail_2026111110051319.html">链接</a><br>
+        6. 进博会参展邀请手册（第八届对比数据） — <a href="https://www.ciie.org/resource/static/zbh/default/assets-2025/download/PDF/CIIE2026InvitationBrochure_CN.pdf">链接</a><br>
+        7. 进博会官网：医疗展区、消费品展区展位图 — <a href="https://www.ciie.org/zbh/bqgffb/20260901/63827.html">链接</a><br><br>
+        <b>二、展区与品牌动态</b><br>
+        8. 进博会官网：消费品展区提前剧透（欧莱雅、宜家、始祖鸟） — <a href="https://www.ciie.org/zbh/cn/2024/medium-item2/shanghai/20261028/64944.html">链接</a><br>
+        9. 上观新闻／文汇报：欧莱雅 28 品牌、29 款首发 — <a href="http://www.shobserver.com/staticsg/res/html/journal/detail.html?code=whb&date=2026-11-05&id=543548&page=7">链接</a><br>
+        10. 进博会官网：欧莱雅三款美妆科技与 K-SPA 技术 — <a href="https://www.ciie.org/zbh/cn/2024/medium-item2/other/20261022/64716.html">链接</a><br>
+        11. 上海市外办：消费品展区探馆（雅诗兰黛 17 品牌 80+ 新品） — <a href="https://wsb.sh.gov.cn/ywdt/gzjx/20261105/bfa4f2df0fc242389e7ccef4560d2dd2.html">链接</a><br>
+        12. 上观新闻：消费品展区全景（资生堂 60+ 款） — <a href="https://www.shobserver.cn/wx/detail.do?id=1207585">链接</a><br>
+        13. 进博会官网：《进博新品汇》消费品展区排期 — <a href="https://www.ciie.org/zbh/cn/19news/dynamics/exhibitors/20261105/65512.html">链接</a><br>
+        14. 进博会官网转载：医疗展区创展台面积新高 — <a href="https://www.ciie.org/zbh/cn/2024/medium-item2/shanghai/20261104/65399.html">链接</a><br>
+        15. 新华网：首发首秀创新产品现场 — <a href="http://www.sh.xinhuanet.com/20261107/bffe60a3a05a4f69af6246119a00b472/c.html">链接</a><br>
+        16. 进博会官网：CIIE-HEALTH 适老黑科技 — <a href="https://www.ciie.org/zbh/cn/ciie/spotlight/20261102/65184.html">链接</a><br>
+        17. 民政部：科技赋能银发经济见闻（飞利浦 56 款新品） — <a href="https://www.mca.gov.cn/n1288/n1290/n1316/c1662004999980014459/content.html?site=elder">链接</a><br><br>
+        <b>三、竞品与产品</b><br>
+        18. 新浪财经：OSIM 傲胜 DreamSPA 首发 — <a href="https://finance.sina.com.cn/jjxw/2026-11-10/doc-iniyfuyw5948798.shtml.md">链接</a><br>
+        19. 搜狐：uDream AI 技术细节与奖项 — <a href="https://m.sohu.com/a/1098008417_122058772/">链接</a><br>
+        20. 澎湃新闻：荣泰 10 款 AI 按摩机器人、A5-02 展位 — <a href="https://m.thepaper.cn/newsDetail_forward_34445001">链接</a><br>
+        21. 海报新闻：松下展台概要（903㎡、按摩椅与肩颈传导带） — <a href="http://w.dzwww.com/p/pbrffnykx9.html">链接</a><br>
+        22. 松下中国：5.1 馆 B3-01 展位 — <a href="https://m.weibo.cn/detail/5363033309446815">链接</a><br>
+        23. 腾讯新闻：Dr.Jart+ 324 浓修彩丸面膜与修护 2.0 — <a href="https://news.qq.com/rain/a/20261111A04KNS00">链接</a><br>
+        24. 上海市商务委：飞利浦首发清单与头皮养护梳 — <a href="https://sww.sh.gov.cn/swdt/20261105/28f7c891fb154e15a8ee5df3b389fd17.html">链接</a><br>
+        25. 雅萌官网：家用机与院线机同台展出 — <a href="https://www.ya-man.co.jp/en/news/2932/">链接</a><br>
+        26. 雅萌官网：中国区院线新品与 2025 年三类械获批 — <a href="https://www.ya-man.co.jp/news/25532/">链接</a><br>
+        27. 初普品牌资料（产品线口径） — <a href="https://m.baike.com/wiki/%E5%88%9D%E6%99%AE/7124419130917049611">链接</a><br><br>
+        <b>四、进口与消费数据</b><br>
+        28. 海关总署：进口化妆品将启用电子标签（2025 年进出口 1716.1 亿元） — <a href="http://www.customs.gov.cn/customs/2026-05/14/article_2026051415534169732.html">链接</a><br>
+        29. 海关总署：一季度消费品进口回升（化妆品 +4.9%） — <a href="http://www.customs.gov.cn/customs/2026-04/16/article_2026041610080491060.html">链接</a><br>
+        30. 券商行业报告：2026Q1 化妆品进出口结构（三方口径） — <a href="https://pdf.dfcfw.com/pdf/H3_AP202604281821703908_1.pdf">链接</a><br>
+        31. 海关总署：一季度进口商品贸易方式量值表 — <a href="https://cceeccic.org/1107848646.html">链接</a><br><br>
+        <b>五、下届与机制</b><br>
+        32. 进博会官网：第十届招展启动（68 家签约、5 万㎡） — <a href="https://www.ciie.org/zbh/bqgffb/20260728/63288.html">链接</a><br>
+        33. 进博会官网：第十届报名渠道与展期 — <a href="https://www.ciie.org/zbh/cn/19news/notice/20261001/64285.html">链接</a><br>
+        34. 进博会官网：整体介绍与虹桥论坛 — <a href="https://www.ciie.org/zbh/cn/IEF/introduction/">链接</a><br>
+        35. 媒体观察：首发经济的三个闭环（通关与虹桥品汇口径） — <a href="http://m.toutiao.com/group/7706723236700062271/">链接</a><br>
+        36. 进博会官网：网上展厅（展商名录核对入口） — <a href="https://www.ciie.org/hall/f/hall/index">链接</a><br>
+        37. 进博会官网转载：百联美妆采购规模、枫缇展位升级 — <a href="https://www.ciie.org/zbh/cn/2024/medium-item1/other/20260727/63154.html">链接</a><br>
+        38. 上观新闻：美创静界 Beauty Hub 全球美妆会客厅 — <a href="http://m.toutiao.com/group/7701675218510627368/">链接</a>
+      </div>
+    </div>
+  </details>
+</section>
+
+</div>
+
+<footer>
+  <div class="motto">MOVE WITH CONFIDENCE · VD FIT产品团队</div>
+  <div class="fin">第九届上海进博会简报 · 2026-11-11<br>数据截至 2026-11-10；标注“判断”之处为分析意见，标注“待核实”之处尚无公开证据。</div>
+</footer>
+
+</body>
+</html>
